@@ -1,6 +1,7 @@
 
 import axios from 'axios'
 import { axiosInstance } from './axiosInstance';
+
 export class BaseNetwork {
 
     async getAll(url: string) : Promise<any[]> {
