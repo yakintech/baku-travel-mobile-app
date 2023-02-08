@@ -18,14 +18,10 @@ const Index = () => {
         tabBarStyle: {
           backgroundColor: '#1C1C1C',
         },
+        tabBarActiveTintColor: '#018CF1',
+        tabBarInactiveBackgroundColor:'#f9f9f9',
+  
       }}
-
-
-    // tabBarOptions={{
-    //   activeTintColor: '#018CF1',
-    //   inactiveTintColor: '#f9f9f9',
-    //   backgroundColor: '#1C1C1C',
-    // }}
 
     >
       <Tab.Screen
@@ -35,10 +31,10 @@ const Index = () => {
           tabBarLabel: 'Discover',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
-              name="chess-rook"
-              color={color}
-              size={26}
-            />
+            name="chess-rook"
+            color={color}
+            size={26}
+          />
           ),
         })}
       />
@@ -50,10 +46,10 @@ const Index = () => {
           tabBarLabel: 'Restaurants',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
-              name="chess-rook"
-              color={color}
-              size={26}
-            />
+            name="chess-rook"
+            color={color}
+            size={26}
+          />
           ),
         }}
       />
@@ -65,10 +61,10 @@ const Index = () => {
           tabBarLabel: 'Shops',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
-              name="shopping-outline"
-              color={color}
-              size={26}
-            />
+            name="chess-rook"
+            color={color}
+            size={26}
+          />
           ),
         }}
       />
@@ -80,10 +76,10 @@ const Index = () => {
           tabBarLabel: 'Hotels',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
-              name="bookmark-outline"
-              color={color}
-              size={26}
-            />
+                name="chess-rook"
+                color={color}
+                size={26}
+              />
           ),
         }}
       />
@@ -95,10 +91,10 @@ const Index = () => {
           tabBarLabel: 'Favorites',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
-              name="bookmark-outline"
-              color={color}
-              size={26}
-            />
+            name="chess-rook"
+            color={color}
+            size={26}
+          />
           ),
         }}
       />
