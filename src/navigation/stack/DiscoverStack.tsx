@@ -1,12 +1,30 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import DiscoverListScreen from "../../screens/Discover";
+import LocationHeaderView from "../../components/LocationHeaderView";
 
 const DiscoverStack = () => {
-  return (
-    <View>
-      <Text>DiscoverStack</Text>
-    </View>
-  )
-}
+  const DiscoverStack = createNativeStackNavigator();
 
-export default DiscoverStack
+  return (
+    <>
+      <DiscoverStack.Navigator>
+        <DiscoverStack.Screen
+          name="DiscoverList"
+          component={DiscoverListScreen}
+          options={{
+            headerTitle: () => <LocationHeaderView />,
+            headerStyle: {
+              backgroundColor: "#1c1c1c",
+            },
+          }}
+        />
+      </DiscoverStack.Navigator>
+    </>
+  );
+};
+
+export default DiscoverStack;
+
+const styles = StyleSheet.create({});
