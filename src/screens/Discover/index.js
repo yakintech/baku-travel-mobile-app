@@ -6,10 +6,24 @@ import {
   Image,
   FlatList,
 } from "react-native";
+import { useState, useEffect } from "react";
 import React from "react";
 import MuseumCard from "../../components/MuseumCard";
 import { museumsData } from "../../../museumData";
+import axios from "axios";
+
 const Index = ({ navigation }) => {
+  const [data, setdata] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://seal-app-s3qug.ondigitalocean.app/api/places")
+      .then((res) => {
+        setdata(res.data);
+      });
+  }, []);
+  console.log(data);
+
   const renderItem = ({ item }) => {
     return <MuseumCard props={item} navigation={navigation} />;
   };

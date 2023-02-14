@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import Tab from "./src/navigation/Index";
 import { BaseNetwork } from "./src/api/BaseNetwork";
 import { LocationProvider } from "./src/store/context/LocationContext";
+import SplashScreen from "react-native-splash-screen";
 
 const App = () => {
   useEffect(() => {
@@ -12,6 +13,10 @@ const App = () => {
     network.getAll("/places").then((res) => {
       console.log("RES", res);
     });
+  }, []);
+
+  useEffect(() => {
+    SplashScreen.hide();
   }, []);
 
   return (
