@@ -35,7 +35,7 @@ const DetailScreen = ({ route }) => {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#1C1C1C" }}>
-      {/* <MapView
+      <MapView
         userInterfaceStyle={"dark"}
         showsUserLocation
         showsMyLocationButton
@@ -62,7 +62,7 @@ const DetailScreen = ({ route }) => {
           title={museum.name}
           description={museum.description.substring(0, 50)}
         ></Marker>
-      </MapView> */}
+      </MapView>
       <MyCarousel />
       <View style={style.styleBackgroundWithoutMap}>
         <View style={style.styleDistanceAndCondition}>
