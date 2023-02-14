@@ -3,6 +3,7 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import DiscoverListScreen from "../../screens/Discover";
 import LocationHeaderView from "../../components/LocationHeaderView";
+import Detail from "../../screens/Discover/Detail";
 
 const DiscoverStack = () => {
   const DiscoverStack = createNativeStackNavigator();
@@ -20,6 +21,7 @@ const DiscoverStack = () => {
             },
           }}
         />
+        <DiscoverStack.Screen name="Discoverdetail" component={Detail} />
       </DiscoverStack.Navigator>
     </>
   );

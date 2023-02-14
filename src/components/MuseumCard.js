@@ -69,7 +69,7 @@ const MuseumCard = ({ props, navigation }) => {
         <View>
           <Pressable
             onPress={() =>
-              navigation.navigate("MuseumDetail", {
+              navigation.navigate("Discoverdetail", {
                 id: props.id,
               })
             }

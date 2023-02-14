@@ -11,7 +11,7 @@ import MuseumCard from "../../components/MuseumCard";
 import { museumsData } from "../../../museumData";
 const Index = ({ navigation }) => {
   const renderItem = ({ item }) => {
-    return <MuseumCard props={item} />;
+    return <MuseumCard props={item} navigation={navigation} />;
   };
 
   return (
