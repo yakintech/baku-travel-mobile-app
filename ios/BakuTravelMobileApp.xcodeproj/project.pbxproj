@@ -38,6 +38,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BakuTravelMobileApp/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-BakuTravelMobileApp-BakuTravelMobileAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BakuTravelMobileApp-BakuTravelMobileAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DD8295A2993900D0088064E /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		1DD8295B299B88610088064E /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-BakuTravelMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BakuTravelMobileApp.debug.xcconfig"; path = "Target Support Files/Pods-BakuTravelMobileApp/Pods-BakuTravelMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-BakuTravelMobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BakuTravelMobileApp.release.xcconfig"; path = "Target Support Files/Pods-BakuTravelMobileApp/Pods-BakuTravelMobileApp.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-BakuTravelMobileApp-BakuTravelMobileAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BakuTravelMobileApp-BakuTravelMobileAppTests.debug.xcconfig"; path = "Target Support Files/Pods-BakuTravelMobileApp-BakuTravelMobileAppTests/Pods-BakuTravelMobileApp-BakuTravelMobileAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		1DD8295929938FDF0088064E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				1DD8295B299B88610088064E /* FontAwesome.ttf */,
 				1DD8295A2993900D0088064E /* MaterialCommunityIcons.ttf */,
 			);
 			name = Fonts;

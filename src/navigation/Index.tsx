@@ -3,7 +3,6 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import DiscoverStack from "./stack/DiscoverStack";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import Fontawesome from "react-native-vector-icons/FontAwesome5";
 import RestaurantStack from "./stack/RestaurantStack";
 import ShopStack from "./stack/ShopStack";
 import HotelStack from "./stack/HotelStack";
