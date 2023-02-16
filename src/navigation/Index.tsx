@@ -20,8 +20,8 @@ const Index = () => {
           tabBarStyle: {
             backgroundColor: "#1C1C1C",
           },
+
           tabBarActiveTintColor: "#018CF1",
-          tabBarInactiveBackgroundColor: "#f9f9f9",
         }}
       >
         <Tab.Screen

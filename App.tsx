@@ -5,7 +5,7 @@ import Tab from "./src/navigation/Index";
 import { BaseNetwork } from "./src/api/BaseNetwork";
 import { LocationProvider } from "./src/store/context/LocationContext";
 import SplashScreen from "react-native-splash-screen";
-
+import { FavoritesProvider } from "./src/store/context/FavoritesContext";
 const App = () => {
   useEffect(() => {
     let network = new BaseNetwork();
@@ -21,11 +21,14 @@ const App = () => {
 
   return (
     <>
-      <LocationProvider>
-        <NavigationContainer>
-          <Tab />
-        </NavigationContainer>
-      </LocationProvider>
+      <FavoritesProvider>
+        <LocationProvider>
+          <NavigationContainer>
+            <Tab />
+          </NavigationContainer>
+        </LocationProvider>
+
+      </FavoritesProvider>
     </>
   );
 };
