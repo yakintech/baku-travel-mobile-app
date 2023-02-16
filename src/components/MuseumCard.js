@@ -3,8 +3,9 @@ import React, { useContext } from "react";
 import { locationContext } from "../store/context/LocationContext";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { getDistance } from "geolib";
+import { Shadow } from "react-native-shadow-2";
 import { favoritesStorageHelper } from "../helpers/FavoriteStorageHelper";
-import { favoritesContext } from "../store/context/favoritesContext";
+import { favoritesContext } from "../store/context/FavoritesContext";
 
 const MuseumCard = ({ props, navigation }) => {
   const { location, setLocation } = useContext(locationContext);
@@ -23,45 +24,45 @@ const MuseumCard = ({ props, navigation }) => {
     );
   };
 
-  // const { favorites, setfavorites } = useContext(favoritesContext);
+  const { favorites, setfavorites } = useContext(favoritesContext);
 
-  // const addToFavorites = (item) => {
-  //   item.type = "Museum";
-  //   //favorite control
-  //   let favorite = favorites.find((q) => q.id == item.id);
+  const addToFavorites = (item) => {
+    item.type = "Museum";
+    //favorite control
+    let favorite = favorites.find((q) => q.id == item.id);
 
-  //   if (favorite) {
-  //     let filteredFavorites = favorites.filter((q) => q.id != item.id);
-  //     setfavorites([...filteredFavorites]);
-  //     favoritesStorageHelper.set([...filteredFavorites]);
-  //   } else {
-  //     setfavorites([...favorites, item]);
-  //     favoritesStorageHelper.set([...favorites, item]);
-  //   }
-  // };
+    if (favorite) {
+      let filteredFavorites = favorites.filter((q) => q.id != item.id);
+      setfavorites([...filteredFavorites]);
+      favoritesStorageHelper.set([...filteredFavorites]);
+    } else {
+      setfavorites([...favorites, item]);
+      favoritesStorageHelper.set([...favorites, item]);
+    }
+  };
 
-  // const getStarIcon = (id) => {
-  //   let favorite = favorites.find((q) => q.id == id);
+  const getStarIcon = (id) => {
+    let favorite = favorites.find((q) => q.id == id);
 
-  //   if (favorite)
-  //     return (
-  //       <MaterialCommunityIcons
-  //         style={style.row.info.icon}
-  //         name="bookmark"
-  //         color={"#018CF1"}
-  //         size={26}
-  //       />
-  //     );
-  //   else
-  //     return (
-  //       <MaterialCommunityIcons
-  //         name="bookmark-outline"
-  //         color={"#F6F6F6"}
-  //         size={26}
-  //         style={style.row.info.icon}
-  //       />
-  //     );
-  // };
+    if (favorite)
+      return (
+        <MaterialCommunityIcons
+          style={style.row.info.icon}
+          name="bookmark"
+          color={"#018CF1"}
+          size={26}
+        />
+      );
+    else
+      return (
+        <MaterialCommunityIcons
+          name="bookmark-outline"
+          color={"#F6F6F6"}
+          size={26}
+          style={style.row.info.icon}
+        />
+      );
+  };
 
   return (
     <>
@@ -83,6 +84,7 @@ const MuseumCard = ({ props, navigation }) => {
                   <Text style={style.row.name}>{props.name}</Text>
                 </View>
                 <View style={style.animation}>
+
                   <Image
                     style={style.img}
                     source={{
@@ -112,7 +114,7 @@ const MuseumCard = ({ props, navigation }) => {
                     style={style.row.info.icon}
                     onPress={() => addToFavorites(props)}
                   >
-                    {/* {getStarIcon(props.id)} */}
+                    {getStarIcon(props.id)}
                   </Pressable>
                 </View>
               </View>
@@ -159,7 +161,11 @@ const style = StyleSheet.create({
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
-      // paddingVertical: 10,
+      backgroundColor: "#202020",
+      borderBottomLeftRadius: 16,
+      borderBottomRightRadius: 16,
+
+      paddingHorizontal: 12,
 
       text: {
         color: "#909090",
@@ -173,8 +179,8 @@ const style = StyleSheet.create({
   img: {
     width: 350,
     height: 200,
-    borderTopLeftRadius: 15,
-    borderTopRightRadius: 15,
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
   },
   animation: {
     shadowColor: "#red",

@@ -19,6 +19,9 @@ const DiscoverStack = () => {
             headerStyle: {
               backgroundColor: "#1c1c1c",
             },
+            contentStyle: {
+              backgroundColor: "#1c1c1c"
+            }
           }}
         />
         <DiscoverStack.Screen name="Discoverdetail" component={Detail} />
