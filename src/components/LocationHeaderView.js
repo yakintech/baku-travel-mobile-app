@@ -42,14 +42,20 @@ const LocationHeaderView = () => {
   }, [location]);
   return (
     <View style={styles.wrapper}>
+      <View style={styles.hamburgerMenu}>
+
+      </View>
       <View style={styles.address}>
         <FontAwesome
           name="location-arrow"
           size={19}
-          color={"#018CF1"}
+          color={"#F6F6F6"}
           style={styles.location}
         />
         <Text style={styles.text}>{address && address}</Text>
+      </View>
+      <View style={styles.weather}>
+
       </View>
     </View>
   );
@@ -60,16 +66,25 @@ export default LocationHeaderView;
 const styles = StyleSheet.create({
   wrapper: {
     flexDirection: "row",
-    justifyContent: "space-between",
     width: "100%",
     paddingRight: 29,
   },
+  hamburgerMenu: {
+    width: 32,
+    height: 32,
+    color: "#F6F6F6",
+    backgroundColor: "#34343440",
+    borderRadius: 12,
+    marginRight: 14,
+
+  },
   address: {
+    width: 160,
     borderRadius: 12,
     flexDirection: "row",
     paddingHorizontal: 8,
     paddingVertical: 7,
-    backgroundColor: "#34343466",
+    backgroundColor: "#34343440",
     alignContent: "space-between",
   },
   location: {
@@ -80,13 +95,15 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   weather: {
-    backgroundColor: "#34343466",
+    backgroundColor: "#34343440",
     borderRadius: 12,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     paddingRight: 8,
-    alignSelf: "flex-end",
+    
+    width: 61,
+    height: 33
   },
   weatherIcon: {
     width: 60,

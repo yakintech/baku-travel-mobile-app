@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { locationContext } from "../store/context/LocationContext";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { getDistance } from "geolib";
+import Icon from 'react-native-ionicons';
 import { favoritesStorageHelper } from "../helpers/FavoriteStorageHelper";
 import { favoritesContext } from "../store/context/favoritesContext";
 
@@ -40,28 +41,28 @@ const MuseumCard = ({ props, navigation }) => {
   //   }
   // };
 
-  // const getStarIcon = (id) => {
-  //   let favorite = favorites.find((q) => q.id == id);
+  const getStarIcon = (id) => {
+    let favorite = favorites.find((q) => q.id == id);
 
-  //   if (favorite)
-  //     return (
-  //       <MaterialCommunityIcons
-  //         style={style.row.info.icon}
-  //         name="bookmark"
-  //         color={"#018CF1"}
-  //         size={26}
-  //       />
-  //     );
-  //   else
-  //     return (
-  //       <MaterialCommunityIcons
-  //         name="bookmark-outline"
-  //         color={"#F6F6F6"}
-  //         size={26}
-  //         style={style.row.info.icon}
-  //       />
-  //     );
-  // };
+    if (favorite)
+      return (
+        <MaterialCommunityIcons
+          style={style.row.info.icon}
+          name="bookmark"
+          color={"#018CF1"}
+          size={26}
+        />
+      );
+    else
+      return (
+        <MaterialCommunityIcons
+          name="bookmark-outline"
+          color={"#F6F6F6"}
+          size={26}
+          style={style.row.info.icon}
+        />
+      );
+  };
 
   return (
     <>
@@ -82,6 +83,7 @@ const MuseumCard = ({ props, navigation }) => {
                   <Text style={style.row.location}>Baku, Old City</Text>
                   <Text style={style.row.name}>{props.name}</Text>
                 </View>
+                <View style={style.cardBackground}>
                 <View style={style.animation}>
                   <Image
                     style={style.img}
@@ -90,8 +92,9 @@ const MuseumCard = ({ props, navigation }) => {
                     }}
                   />
                 </View>
+                <View style={{flexDirection: "row", justifyContent: "space-between"}}>
                 <View style={style.row.info}>
-                  <View style={{ flexDirection: "row" }}>
+                  <View style={{ flexDirection: "row", padding: 16 }}>
                     <Text style={style.row.info.text}>
                       {" "}
                       {calculateDistance(
@@ -100,20 +103,22 @@ const MuseumCard = ({ props, navigation }) => {
                         location && location.coords.latitude,
                         location && location.coords.longitude
                       )}
-                      km
+                      km • 
                     </Text>
                     <Text
-                      style={{ color: "rgb(144, 82, 47)", marginHorizontal: 5 }}
+                      style={{ color: "#E0783E", marginHorizontal: 5, fontWeight: 400 }}
                     >
                       Open soon
                     </Text>
+                  </View>
                   </View>
                   <Pressable
                     style={style.row.info.icon}
                     onPress={() => addToFavorites(props)}
                   >
-                    {/* {getStarIcon(props.id)} */}
+                    <Icon name={"bookmark"} style={{color: "#FFFFFF"}} />
                   </Pressable>
+                  </View>
                 </View>
               </View>
             </View>
@@ -131,7 +136,8 @@ const style = StyleSheet.create({
     backgroundColor: "#1C1C1C",
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: 30,
+    paddingTop: 16,
+    
   },
   body: {
     // paddingTop: 10,
@@ -163,21 +169,29 @@ const style = StyleSheet.create({
 
       text: {
         color: "#909090",
+        fontSize: 14
       },
       icon: {
-        // color: 'white',
+        color: "#FFFFFF",
         marginVertical: 5,
+        paddingHorizontal: 14
       },
     },
   },
   img: {
-    width: 350,
+    width: 375,
     height: 200,
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
   },
+  cardBackground: {
+    backgroundColor: "#202020",
+    borderRadius: 16,
+
+
+  },
   animation: {
-    shadowColor: "#red",
+    shadowColor: "#white",
     shadowOffset: {
       width: 0,
       height: 10,
