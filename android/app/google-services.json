@@ -7,6 +7,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:963929484006:android:69711fc70f5f17527d6927",
+        "android_client_info": {
+          "package_name": "com.bakutravelmobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963929484006-3cbks3g2to21ngpq1effqhkvv6jtv1m7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_fCM4b8zvjlvAj3lsa7kzAKXenqwfBCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963929484006-3cbks3g2to21ngpq1effqhkvv6jtv1m7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:963929484006:android:4ac1cd8d75414a577d6927",
         "android_client_info": {
           "package_name": "com.codeacademy.bakutravel"
