@@ -18,9 +18,10 @@ const Index = () => {
           headerShown: false,
           tabBarStyle: {
             backgroundColor: "#1C1C1C",
+            height: 100
           },
-          tabBarActiveTintColor: "#018CF1",
-          tabBarInactiveBackgroundColor: "#f9f9f9",
+          tabBarActiveTintColor: "#F6F6F6",
+          tabBarInactiveBackgroundColor: "#1C1C1C",
         }}
       >
         <Tab.Screen
@@ -31,7 +32,7 @@ const Index = () => {
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons
                 name="globe-model"
-                color={color}
+                color={"#F6F6F6"}
                 size={26}
               />
             ),
@@ -44,7 +45,7 @@ const Index = () => {
           options={{
             tabBarLabel: "Restaurants",
             tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name="grill" color={color} size={26} />
+              <MaterialCommunityIcons name="grill" color={"#F6F6F6"} size={26} />
             ),
           }}
         />
@@ -55,7 +56,7 @@ const Index = () => {
           options={{
             tabBarLabel: "Shops",
             tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name="shopping" color={color} size={26} />
+              <MaterialCommunityIcons name="shopping" color={"#F6F6F6"} size={26} />
             ),
           }}
         />
@@ -66,8 +67,8 @@ const Index = () => {
           options={{
             tabBarLabel: "Hotels",
             tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name="home" color={color} size={26} />
-            ),
+              <MaterialCommunityIcons name="home" color={"#F6F6F6"} size={26} />
+              ),
           }}
         />
 
@@ -77,7 +78,7 @@ const Index = () => {
           options={{
             tabBarLabel: "Favorites",
             tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name="bookmark" color={color} size={26} />
+              <MaterialCommunityIcons name="bookmark" color={"#F6F6F6"} size={26} />
             ),
           }}
         />
